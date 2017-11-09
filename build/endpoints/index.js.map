@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/endpoints/index.ts"],"names":[],"mappings":";;AAAA,uDAAsD;AAE7C,gDAAkB","file":"index.js","sourcesContent":["import * as ProjectsController from './projects/index'\n\nexport { ProjectsController }\n"],"sourceRoot":"../../src"}
