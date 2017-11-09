@@ -1,0 +1,23 @@
+<div *ngIf="projects[0].name !== '...'">
+  <div class = "row bar">
+      <div class = "col-md-3">
+        name
+      </div>
+      <div class = "col-md-3">
+        description
+      </div>
+      <div class = "col-md-3">
+        status
+      </div>
+  </div>
+  <app-oneproject-view
+      *ngFor="let project of projects"
+      [project]="project" 
+      (deleteProject)="deleteProject($event)"
+      (updateProject)="updateProject($event)" >
+  </app-oneproject-view>
+  <app-project-form [project]="projectform" (createProject)="createProject($event)"></app-project-form>
+<div>
+<div *ngIf="projects[0].name === '...'">
+    <h1>Loading...<h1>
+<div>

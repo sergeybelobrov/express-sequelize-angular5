@@ -1,0 +1,30 @@
+<div *ngIf="!isEditing"    class = "row" >
+    <div class = "col-md-3">
+      {{project.name}}
+    </div>
+    <div class = "col-md-3">
+      {{project.description}}
+    </div>
+    <div class = "col-md-3">
+      {{project.status}}
+    </div>
+    <div class = "col-md-3">
+      <button (click)="onEdit()" class = "btn-success" >Edit</button>
+      <button (click)="onDelete()" class = "btn-danger" >Delete</button>
+    </div>
+</div>
+<div *ngIf="isEditing" class = "row">
+  <div class = "col-md-3">
+    <input type = "text" [(ngModel)]="project.name" >
+  </div>
+  <div class = "col-md-3">
+    <input type = "text" [(ngModel)]="project.description" >
+  </div>
+  <div class = "col-md-3">
+    <input type = "text" [(ngModel)]="project.status">
+  </div>
+  <div class = "col-md-3">
+    <button (click)="onUpdate()" class = "btn-success" >Update</button>
+    <button (click)="onEdit()" class = "btn-danger" >Cancel</button>
+  </div>
+</div>
